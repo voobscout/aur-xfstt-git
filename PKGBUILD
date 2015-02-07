@@ -13,7 +13,7 @@ arch=('i686' 'x86_64')
 license=('GPL2')
 # depends=()
 makedepends=('git' 'pkg-config' 'autoconf' 'automake' 'gettext')
-url=""
+url="http://www.hadrons.org/software/xfstt"
 provides=('xfstt')
 # optdepends=()
 
