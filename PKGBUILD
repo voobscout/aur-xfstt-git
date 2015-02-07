@@ -63,15 +63,4 @@ package() {
   msg "Installing XFSTT"
   cd ${srcdir}/${_gitname}
   make DESTDIR=${pkgdir} install
-
-  # msg "Installing StumpWM xsession"
-  # install -Dm 0644 ${srcdir}/stumpwm.desktop ${pkgdir}/usr/share/xsessions/stumpwm.desktop
-
-  # msg "Installing stumpwmrc.sample"
-  # install -Dm 0644 sample-stumpwmrc.lisp ${pkgdir}/etc/stumpwmrc.sample
-
-  # msg "Installing stumpish"
-  # cd ${srcdir}
-  # wget -c https://raw.githubusercontent.com/stumpwm/stumpwm-contrib/master/util/stumpish/stumpish
-  # install -Dm 0755 ${srcdir}/stumpish ${pkgdir}/usr/bin/stumpish
- }
+}
