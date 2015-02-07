@@ -11,20 +11,16 @@ pkgrel=1
 pkgdesc="X Font Server TrueType"
 arch=('i686' 'x86_64')
 license=('GPL2')
-depends=()
-makedepends=('git' 'pkg-config' 'autoconf' 'automake' 'gettext' 'texinfo')
+# depends=()
+makedepends=('git' 'pkg-config' 'autoconf' 'automake' 'gettext')
 url=""
 provides=('stumpwm')
-optdepends=('emacs: Edit and eval stumpwm code with M-x stumpwm-mode'
-            'stumpwm-contrib: A collection of StumpWM modules'
-           )
+# optdepends=()
 
 source=('git://git.hadrons.org/git/xfstt.git'
-        # 'xfstt.install'
        )
 
 sha256sums=('SKIP'
-            # 'b51d5ecf4c22fe739089461381396fea227ef4b12c5214d14b87375ec047b2dc'
            )
 
 pkgver() {
