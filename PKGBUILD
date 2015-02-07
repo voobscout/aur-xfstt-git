@@ -14,7 +14,7 @@ license=('GPL2')
 # depends=()
 makedepends=('git' 'pkg-config' 'autoconf' 'automake' 'gettext')
 url=""
-provides=('stumpwm')
+provides=('xfstt')
 # optdepends=()
 
 source=('git://git.hadrons.org/git/xfstt.git'
