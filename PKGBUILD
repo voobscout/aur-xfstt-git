@@ -1,16 +1,14 @@
 # Maintainer: Voobscout <voobscout+aur@gmail.com>
-
-pkgname=xfstt-git
+pkgname=xorg-xfstt-git
 pkgver=1.9.1
 pkgrel=1
 pkgdesc="X Font Server TrueType"
 arch=('i686' 'x86_64')
 license=('GPL2')
-# depends=()
 makedepends=('git' 'pkg-config' 'autoconf' 'automake' 'gettext')
 url="http://www.hadrons.org/software/xfstt"
 provides=('xorg-xfstt')
-# optdepends=()
+optdepends=('xorg-server')
 source=('git://git.hadrons.org/git/xfstt.git')
 sha256sums=('SKIP')
 
@@ -20,7 +18,7 @@ pkgver() {
 }
 
 install=xfstt.install
-options=(!strip)  # Thanks to sidereus for pointing this out
+options=(!strip)
 
 _gitroot="git://git.hadrons.org/git/xfstt.git"
 _gitname="xfstt"
@@ -55,3 +53,4 @@ package() {
   cd ${srcdir}/${_gitname}
   make DESTDIR=${pkgdir} install
 }
+# vim:set ts=2 sw=2 et:
