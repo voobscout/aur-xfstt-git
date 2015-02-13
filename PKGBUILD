@@ -1,9 +1,4 @@
 # Maintainer: Voobscout <voobscout+aur@gmail.com>
-# Original maintainer: M Rawash <mrawash@gmail.com>
-# Contributor: olvar <beren dot olvar (at) gmail dot com>
-# Contributor: Andrew Antle <andrew dot antle at gmail dot com>
-# Contributor: joyfulgirl <joyfulgirl (at) archlinux.us>
-# Contributor: Jonathan Friedman <jonf@gojon.com>
 
 pkgname=xfstt-git
 pkgver=1.9.1
