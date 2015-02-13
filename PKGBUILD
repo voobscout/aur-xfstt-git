@@ -20,22 +20,9 @@ pkgver() {
 install=xfstt.install
 options=(!strip)
 
-_gitroot="git://git.hadrons.org/git/xfstt.git"
-_gitname="xfstt"
-
 build() {
 
-  msg "Connecting to ${_gitroot}..."
-
-  if [ -d ${srcdir}/${_gitname} ] ; then
-      cd ${srcdir}/${_gitname} && git pull origin master
-  else
-    git clone $_gitroot
-  fi
-
-  msg "GIT checkout done or server timeout"
-
-  cd ${srcdir}/${_gitname}
+  cd ${srcdir}/xfstt
 
   msg "Preparing XFSTT sources..."
   autoreconf -Wall -f -i
@@ -50,7 +37,7 @@ build() {
 
 package() {
   msg "Installing XFSTT"
-  cd ${srcdir}/${_gitname}
+  cd ${srcdir}/xfstt
   make DESTDIR=${pkgdir} install
 }
 # vim:set ts=2 sw=2 et:
