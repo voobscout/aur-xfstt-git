@@ -1,5 +1,5 @@
 # Maintainer: Voobscout <voobscout+aur@gmail.com>
-pkgname=xorg-xfstt-git
+pkgname=xorg-xfstt
 pkgver=1.9.1
 pkgrel=1
 pkgdesc="X Font Server TrueType"
