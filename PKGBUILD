@@ -14,14 +14,10 @@ license=('GPL2')
 # depends=()
 makedepends=('git' 'pkg-config' 'autoconf' 'automake' 'gettext')
 url="http://www.hadrons.org/software/xfstt"
-provides=('xfstt')
+provides=('xorg-xfstt')
 # optdepends=()
-
-source=('git://git.hadrons.org/git/xfstt.git'
-       )
-
-sha256sums=('SKIP'
-           )
+source=('git://git.hadrons.org/git/xfstt.git')
+sha256sums=('SKIP')
 
 pkgver() {
 	cd ${srcdir}/${pkgname%%-*}
