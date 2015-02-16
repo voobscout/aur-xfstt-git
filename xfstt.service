@@ -1,0 +1,12 @@
+[Unit]
+Description=X Font Server TrueType
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/xfstt --cache /var/cache/xfstt --port 7101 --dir /usr/share/fonts/TTF
+Restart=always
+RestartSec=5
+
+[Install]
+Alias=xfstt.service

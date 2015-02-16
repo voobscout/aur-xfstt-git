@@ -1,35 +1,27 @@
-pre_install() {
-  cat << "EOM"
-Pre install
-EOM
-}
-
 post_install() {
-  cat << "EOM"
-Post install
-EOM
+echo -e "\033[32;1mX Font Server TrueType package installs 'xfstt' systemd unit\033[0m"
+echo -e "\033[32;1mPlease remember to enable / (re)start systemd unit!\033[0m"
+echo -e "\033[31;1msudo systemctl enable xfstt\033[0m"
+echo -e "\033[31;1msudo systemctl restart xfstt\033[0m"
 }
 
 pre_upgrade() {
-  cat << "EOM"
-Pre upgrade
-EOM
+echo -e "\033[31;1mStopping xfstt systemd unit for upgrade...\033[0m"
+sudo systemctl stop xfstt
 }
 
 post_upgrade() {
-  cat << "EOM"
-Post upgrade
-EOM
+echo -e "\033[32;1mRemember to (re)start xfstt systemd unit...\033[0m"
+echo -e "\033[31;1msudo systemctl restart xfstt\033[0m"
 }
 
 pre_remove() {
-  cat << "EOM"
-Pre remove
-EOM
+echo -e "\033[31;1mStopping xfstt systemd unit...\033[0m"
+sudo systemctl stop xfstt
+echo -e "\033[31;1mDisabling xfstt systemd unit...\033[0m"
+sudo systemctl disable xfstt
 }
 
 post_remove() {
-  cat << "EOM"
-Pre remove
-EOM
+echo -e "\033[31;1mX Font Server TrueType removed!\033[0m"
 }

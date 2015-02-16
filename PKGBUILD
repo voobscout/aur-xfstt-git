@@ -39,5 +39,8 @@ package() {
   msg "Installing XFSTT"
   cd ${srcdir}/xfstt
   make DESTDIR=${pkgdir} install
+
+  msg2 "Installing systemd xfstt unit"
+  install -Dm 0644 ${srcdir}/xfstt.service ${pkgdir}/usr/lib/systemd/system/xfstt.service
 }
 # vim:set ts=2 sw=2 et:
