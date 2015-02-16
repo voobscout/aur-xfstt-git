@@ -9,8 +9,12 @@ makedepends=('git' 'pkg-config' 'autoconf' 'automake' 'gettext')
 url="http://www.hadrons.org/software/xfstt"
 provides=('xorg-xfstt')
 optdepends=('xorg-server')
-source=('git://git.hadrons.org/git/xfstt.git')
-sha256sums=('SKIP')
+source=('git://git.hadrons.org/git/xfstt.git'
+        'xfstt.service'
+       )
+sha256sums=('SKIP'
+            '9e829e03e2ca6b1bb552dbbf3f361579474f7a5e013f03de8213e4148a58f07f'
+           )
 
 pkgver() {
 	cd ${srcdir}/${pkgname%%-*}
